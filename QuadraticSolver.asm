@@ -156,14 +156,14 @@ NoSolution:
 	nosolution:	.asciiz "No real solutions."
 
 # Compute the square root of determinant
-# I will use the Babylonian method 6x6 times
+# I will use the Babylonian method 10x10 times
 # because x0 is suposed to be barely equal to the square root 
 # of S. So If we do it over and over again, we will be sure 
 # to find the exact solution even with a huge number.
 # (https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method)
 .text
 SquareRoot:
-	li $s2, 5
+	li $s2, 9
 
 	l.s $f8, x0		# Give $f8 the random guess
 	l.s $f10, halfFloat # Give $f10 the value 0.5
